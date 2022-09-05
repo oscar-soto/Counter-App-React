@@ -6,20 +6,22 @@
 */
 
 const getMessage = () => {
-  return 'Hola desde una funcion'
-}
+  return "Hola desde una funcion";
+};
 
 const newMessage = {
   message: "Hola Mundo",
   title: "Oscar",
 };
 
-export const FirstApp = () => {
+export const FirstApp = ({ title, subTitle }) => {
+  // console.log(props);
+
   return (
     <>
-    <h1>{getMessage()}</h1>
+      <h1>{title}</h1>
       {/* <code>{JSON.stringify(newMessage)}</code> */}
-      <p>Soy un subtitulo</p>
+      <p>{subTitle + 1}</p>
     </>
   );
 };
