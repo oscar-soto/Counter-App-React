@@ -1,27 +1,26 @@
-/*
-  En react puedo imprimir, strings, boolean
-  numbers y arrays pero no puedo con objectos, 
-  para ello hay que pasarlos a json o converlirlos
-  en un array
-*/
-
-const getMessage = () => {
-  return "Hola desde una funcion";
-};
-
-const newMessage = {
-  message: "Hola Mundo",
-  title: "Oscar",
-};
+import PropTypes from "prop-types";
 
 export const FirstApp = ({ title, subTitle }) => {
-  // console.log(props);
+  // if (!title) {
+  //   throw new Error("El title no existe");
+  // }
 
   return (
     <>
       <h1>{title}</h1>
-      {/* <code>{JSON.stringify(newMessage)}</code> */}
-      <p>{subTitle + 1}</p>
+      <p>{subTitle}</p>
     </>
   );
+};
+
+FirstApp.propTypes = {
+  title: PropTypes.string.isRequired,
+  subTitle: PropTypes.number,
+};
+
+FirstApp.defaultProps = {
+  title: "No hay titulo",
+  // subTitle: 'No hay subtitulo',
+  subTitle: 123,
+  name: 'Oscar Espinoza'
 };
