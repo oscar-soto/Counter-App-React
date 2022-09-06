@@ -5,3 +5,16 @@ html, body {
   font-size: 1.3rem;
   background-color: #21232A;
 }
+
+button {
+  padding: 10px 20px;
+  border-radius: .25rem;
+  border: none;
+  font-size: 1.25rem;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+  margin-right: 10px;
+}
+button:hover {
+  opacity: 0.8;
+}
